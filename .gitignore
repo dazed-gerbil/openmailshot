@@ -1,5 +1,5 @@
 # Categorically never, ever, send security details to CVS.
-.env
+DATA
 
 #Jetbrains related files.
 .idea
