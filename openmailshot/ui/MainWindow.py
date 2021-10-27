@@ -30,6 +30,10 @@ class Ui_MainWindow(object):
         self.actionHandbook.setObjectName(u"actionHandbook")
         self.action_About = QAction(MainWindow)
         self.action_About.setObjectName(u"action_About")
+        self.action_Mail_Servers = QAction(MainWindow)
+        self.action_Mail_Servers.setObjectName(u"action_Mail_Servers")
+        self.action_Preferences = QAction(MainWindow)
+        self.action_Preferences.setObjectName(u"action_Preferences")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         MainWindow.setCentralWidget(self.centralwidget)
@@ -45,16 +49,21 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.menu_Help.sizePolicy().hasHeightForWidth())
         self.menu_Help.setSizePolicy(sizePolicy)
+        self.menu_Settings = QMenu(self.menubar)
+        self.menu_Settings.setObjectName(u"menu_Settings")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
 
         self.menubar.addAction(self.menu_File.menuAction())
+        self.menubar.addAction(self.menu_Settings.menuAction())
         self.menubar.addAction(self.menu_Help.menuAction())
         self.menu_File.addAction(self.action_Quit)
         self.menu_Help.addAction(self.actionHandbook)
         self.menu_Help.addAction(self.action_About)
+        self.menu_Settings.addAction(self.action_Mail_Servers)
+        self.menu_Settings.addAction(self.action_Preferences)
 
         self.retranslateUi(MainWindow)
 
@@ -66,7 +75,10 @@ class Ui_MainWindow(object):
         self.action_Quit.setText(QCoreApplication.translate("MainWindow", u"&Quit", None))
         self.actionHandbook.setText(QCoreApplication.translate("MainWindow", u"Handbook", None))
         self.action_About.setText(QCoreApplication.translate("MainWindow", u"&About", None))
+        self.action_Mail_Servers.setText(QCoreApplication.translate("MainWindow", u"&Mail Servers", None))
+        self.action_Preferences.setText(QCoreApplication.translate("MainWindow", u"&Preferences", None))
         self.menu_File.setTitle(QCoreApplication.translate("MainWindow", u"&File", None))
         self.menu_Help.setTitle(QCoreApplication.translate("MainWindow", u"&Help", None))
+        self.menu_Settings.setTitle(QCoreApplication.translate("MainWindow", u"&Settings", None))
     # retranslateUi
 
